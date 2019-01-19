@@ -1,6 +1,6 @@
-import Container from "./components/Container.jsx";
+import App from "./components/App.jsx";
 import React from "react";
 import ReactDOM from "react-dom";
 
 const wrapper = document.getElementById('root');
-ReactDOM.render(<Container />, wrapper);
+ReactDOM.render(<App />, wrapper);
