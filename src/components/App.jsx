@@ -10,18 +10,18 @@ class App extends Component {
       query: '',
       movies: [],
     };
+
+    this.onChangeSearchText = () => {
+      //make request to search movies
+      let dummyMovies = [
+        { title: 'Movie 1' }
+      ];
+  
+      this.setState({ 
+        movies: dummyMovies
+      });
+    };
   }
-
-  onChangeSearchText = () => {
-    //make request to search movies
-    let dummyMovies = [
-      { title: 'Movie 1' }
-    ];
-
-    this.setState({ 
-      movies: dummyMovies
-    });
-  };
 
   render() {
     return (

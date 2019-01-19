@@ -19,7 +19,7 @@ module.exports = {
 
   // Indicates whether the coverage information should be collected while executing the test
   collectCoverageFrom: [
-    "**/src/*/*.{js,jsx}"
+    "**/src/**/*.{js,jsx}"
   ],
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
@@ -117,23 +117,25 @@ module.exports = {
   // setupFiles: [],
 
   // The path to a module that runs some code to configure or set up the testing framework before each test
-  // setupTestFrameworkScriptFile: null,
+  setupTestFrameworkScriptFile: "jest-enzyme",
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  // testEnvironment: "jest-environment-jsdom",
+  testEnvironment: "enzyme",
 
   // Options that will be passed to the testEnvironment
-  // testEnvironmentOptions: {},
+  testEnvironmentOptions: {
+    "enzymeAdapter": "react16"
+  },
 
   // Adds a location field to test results
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
-    "**/tests/**/*.test.js"
+    "**/tests/**/*.test.{js,jsx}"
   ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped

@@ -2,11 +2,11 @@ import React from 'react';
 import MovieItem from './MovieItem.jsx';
 
 const MoviesList = ({ list }) => (
-    <ul>
+    <div>
       {list.map((item) => (
         <MovieItem key={item.title} item={item} />
       ))}
-    </ul>
+    </div>
 );
 
 export default MoviesList;
