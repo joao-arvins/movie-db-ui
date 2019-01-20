@@ -1,6 +1,6 @@
 # Movie DB UI
 
-Webapp providing search functionality over as movies catalog (search is performed by movie title).
+Webapp providing search functionality over a movies catalog (search is performed by movie title).
 
 # Testing
 To test the code run:
