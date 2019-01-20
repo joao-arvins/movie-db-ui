@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBox from '../../src/components/SearchBox.jsx';
+import SearchBox from '../../../src/components/SearchBox.jsx';
 import { shallow } from 'enzyme';
 
 describe('SearchBox Component', () => {

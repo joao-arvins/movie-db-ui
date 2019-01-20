@@ -1,13 +1,13 @@
 import React from 'react';
-import MoviesList from '../../src/components/MoviesList.jsx';
+import MoviesList from '../../../src/components/MoviesList.jsx';
 import { shallow } from 'enzyme';
 
 describe('Movies List Component', () => {
   let component;
 
   const moviesList = [
-    { title : 'A' },
-    { title : 'B' }
+    { id: 1, title : 'A' },
+    { id: 2, title : 'B' }
   ];
 
   beforeEach(() => {

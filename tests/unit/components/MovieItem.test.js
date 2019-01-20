@@ -1,5 +1,5 @@
 import React from 'react';
-import MovieItem from '../../src/components/MovieItem.jsx';
+import MovieItem from '../../../src/components/MovieItem.jsx';
 import { shallow } from 'enzyme';
 
 describe('Movie Item Component', () => {
