@@ -11,7 +11,7 @@ import InputBase from '@material-ui/core/InputBase';
 
 const styles = theme => ({
   root: {
-    width: '100%',
+    width: '100%'
   },
   toolbar: {
     display: 'flex',
@@ -84,7 +84,7 @@ class App extends Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" color="primary">
+        <AppBar position="sticky" color="primary">
           <Toolbar className={classes.toolbar}>
             <div className={classes.search}>
               <div className={classes.icon}>
