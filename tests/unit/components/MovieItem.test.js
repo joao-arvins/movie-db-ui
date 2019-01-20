@@ -1,6 +1,6 @@
 import React from 'react';
 import MovieItem from '../../../src/components/MovieItem.jsx';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Movie Item Component', () => {
   let component;
@@ -9,7 +9,7 @@ describe('Movie Item Component', () => {
   };
 
   beforeEach(() => {
-    component = shallow(<MovieItem key={movieItem.title} item={movieItem}>Facebook</MovieItem>);
+    component = mount(<MovieItem key={movieItem.title} movie={movieItem}>Facebook</MovieItem>);
   });
 
   it('Displays the movie title', () => {

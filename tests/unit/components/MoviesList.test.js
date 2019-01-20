@@ -1,6 +1,6 @@
 import React from 'react';
 import MoviesList from '../../../src/components/MoviesList.jsx';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Movies List Component', () => {
   let component;
@@ -11,7 +11,7 @@ describe('Movies List Component', () => {
   ];
 
   beforeEach(() => {
-    component = shallow(<MoviesList list={moviesList} />);
+    component = mount(<MoviesList list={moviesList} />);
   });
 
   it('Renders one movie item component per item', () => {
