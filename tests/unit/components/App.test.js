@@ -1,17 +1,17 @@
 import React from 'react';
 import App from '../../../src/components/App.jsx';
 import moviesService from '../../../src/services/moviesService';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('App Component', () => {
   let component;
 
   beforeEach(() => {
-    component = shallow(<App/>);
+    component = mount(<App/>);
   });
   
   it('Renders one SearchBox element', () => {
-    expect(component.find('SearchBox').length).toEqual(1);
+    expect(component.find('InputBase').length).toEqual(1);
   });
 
   it('Renders one MoviesList element', () => {
@@ -29,7 +29,7 @@ describe('App Component', () => {
 
     describe('And the new value is an empty string', () => {
       beforeEach(() => {
-        component.find('SearchBox').prop('onChangeSearchText')({ target : { value : '' }  });
+        component.find('InputBase').prop('onChange')({ target : { value : '' }  });
       });
   
       it('No request to search for movies is made', () => {
@@ -39,7 +39,7 @@ describe('App Component', () => {
 
     describe('And the new value is an NOT empty string', () => {
       beforeEach(() => {
-        component.find('SearchBox').prop('onChangeSearchText')({ target : { value : 'test' }  });
+        component.find('InputBase').prop('onChange')({ target : { value : 'test' }  });
       });
   
       it('A request to search for movies is made using the inputted value', () => {
