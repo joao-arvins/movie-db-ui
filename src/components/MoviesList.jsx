@@ -11,22 +11,18 @@ const styles = theme => ({
 });
 
 class MoviesList extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    const { classes } = this.props;
+    const { classes, list } = this.props;
 
-    const moviesOutput = this.props.list.map(movie => (
-      <Grid item xs={12} sm={6} md={4} lg={4} xl={4} key={movie.id} >
+    const moviesOutput = list.map(movie => (
+      <Grid item xs={12} sm={6} md={3} lg={3} xl={3} key={movie.id} >
         <MovieItem key={movie.id} movie={movie} />
       </Grid>
     ));
 
     return (
       <div className={classes.root}>
-        <Grid container spacing={24}>
+        <Grid container spacing={8}>
           {moviesOutput}
         </Grid>
       </div>
@@ -34,11 +30,13 @@ class MoviesList extends Component {
   }
 }
 
+MovieItem.defaultProps = {
+  list: [],
+  classes: null,
+};
+
 MoviesList.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-  })).isRequired
+  list: PropTypes.array.isRequired
 };
 
 export default withStyles(styles)(MoviesList);

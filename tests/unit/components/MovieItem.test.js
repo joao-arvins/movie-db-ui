@@ -5,14 +5,18 @@ import { mount } from 'enzyme';
 describe('Movie Item Component', () => {
   let component;
   const movieItem = {
-    title: 'Dummy Title'
+    id: 1,
+    title: 'Dummy Title',
+    release_date: '2019-01-20',
+    poster_path: '/123456789.jpg',
+    vote_average: 0,
   };
 
   beforeEach(() => {
-    component = mount(<MovieItem key={movieItem.title} movie={movieItem}>Facebook</MovieItem>);
+    component = mount(<MovieItem key={movieItem.id} movie={movieItem}></MovieItem>);
   });
 
   it('Displays the movie title', () => {
-    expect(component.text()).toEqual(movieItem.title);
+    expect(component.text().includes(movieItem.title)).toBeTruthy();
   });
 });

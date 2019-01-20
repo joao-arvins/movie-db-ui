@@ -6,8 +6,20 @@ describe('Movies List Component', () => {
   let component;
 
   const moviesList = [
-    { id: 1, title : 'A' },
-    { id: 2, title : 'B' }
+    {
+      id: 1,
+      title: 'A',
+      release_date: '2019-01-20',
+      poster_path: '/123456789.jpg',
+      vote_average: 0,
+    },
+    {
+      id: 2,
+      title: 'B',
+      release_date: '2019-01-20',
+      poster_path: '/123456789.jpg',
+      vote_average: 0,
+    }
   ];
 
   beforeEach(() => {
